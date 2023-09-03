@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LambdaTest ecommerce playground website test suite ">
+    <test name="Page Factory demo tests using LambdaTest ECommerce Playground">
+        <classes>
+            <class name="io.github.mfaisalkhatri.PlaywrightDemoTests">
+                <methods>
+                    <include name="testOnChrome"/>
+                    <include name="testOnChromeHeadless"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
