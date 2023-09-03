@@ -11,13 +11,14 @@
 
 ## Talking more about the Scenarios Covered in this project:
 
-- I have tried to answer the below questions by providing working code example in this repo:
+I have tried to answer the below questions by providing working code example in this repo:
 
 1. How to run test on Chrome browser?
 1. How to run test on Chrome browser in Headless mode?
 1. How to run tests on Firefox browser?
 1. How to run test on Firefox browser in Headless mode?
 1. How to run test on Chrome/Firefox browser in Slow Motion?
+1. How to run test on Edge browser?
 
 ## How to run the Tests?
 
