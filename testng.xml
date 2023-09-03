@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="LambdaTest ecommerce playground website test suite ">
-    <test name="Page Factory demo tests using LambdaTest ECommerce Playground">
+    <test name="Web Automation Demo tests with Playwright">
         <classes>
             <class name="io.github.mfaisalkhatri.PlaywrightDemoTests">
                 <methods>
                     <include name="testOnChrome"/>
                     <include name="testOnChromeHeadless"/>
+                    <include name="testOnFirefox"/>
+                    <include name="testOnFirefoxHeadless"/>
+                    <include name="testOnChromeSlowMo"/>
+                    <include name="testOnFirefoxSlowMo"/>
                 </methods>
             </class>
         </classes>

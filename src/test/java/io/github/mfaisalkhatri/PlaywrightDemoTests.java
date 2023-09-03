@@ -30,4 +30,44 @@ public class PlaywrightDemoTests {
         assertEquals (pageTitle, "Your Store");
     }
 
+    @Test
+    public void testOnFirefoxHeadless() {
+        final Playwright playwright = Playwright.create();
+        final Browser browser = playwright.firefox().launch();
+        final Page page = browser.newPage();
+        page.navigate("https://ecommerce-playground.lambdatest.io/");
+        final String pageTitle = page.title();
+        assertEquals (pageTitle, "Your Store");
+    }
+
+    @Test
+    public void testOnFirefox() {
+        final Playwright playwright = Playwright.create();
+        final Browser browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        final Page page = browser.newPage();
+        page.navigate("https://ecommerce-playground.lambdatest.io/");
+        final String pageTitle = page.title();
+        assertEquals (pageTitle, "Your Store");
+    }
+
+    @Test
+    public void testOnFirefoxSlowMo() {
+        final Playwright playwright = Playwright.create();
+        final Browser browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(100));
+        final Page page = browser.newPage();
+        page.navigate("https://ecommerce-playground.lambdatest.io/");
+        final String pageTitle = page.title();
+        assertEquals (pageTitle, "Your Store");
+    }
+
+    @Test
+    public void testOnChromeSlowMo() {
+        final Playwright playwright = Playwright.create();
+        final Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(100));
+        final Page page = browser.newPage();
+        page.navigate("https://ecommerce-playground.lambdatest.io/");
+        final String pageTitle = page.title();
+        assertEquals (pageTitle, "Your Store");
+    }
+
 }
