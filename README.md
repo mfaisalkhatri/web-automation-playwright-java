@@ -15,6 +15,9 @@
 
 1. How to run test on Chrome browser?
 1. How to run test on Chrome browser in Headless mode?
+1. How to run tests on Firefox browser?
+1. How to run test on Firefox browser in Headless mode?
+1. How to run test on Chrome/Firefox browser in Slow Motion?
 
 ## How to run the Tests?
 
