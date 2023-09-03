@@ -1,4 +1,4 @@
-package io.github.mfaisalkhatri;
+package io.github.mfaisalkhatri.tests;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
