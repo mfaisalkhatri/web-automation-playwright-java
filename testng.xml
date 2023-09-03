@@ -11,6 +11,7 @@
                     <include name="testOnFirefoxHeadless"/>
                     <include name="testOnChromeSlowMo"/>
                     <include name="testOnFirefoxSlowMo"/>
+                    <include name="testOnEdge"/>
                 </methods>
             </class>
         </classes>
