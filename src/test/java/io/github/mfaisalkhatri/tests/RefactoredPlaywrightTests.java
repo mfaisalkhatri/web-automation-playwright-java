@@ -15,4 +15,5 @@ public class RefactoredPlaywrightTests extends BaseTest {
         final String pageTitle = page.title();
         assertEquals(pageTitle, "Your Store");
     }
+
 }
