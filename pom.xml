@@ -18,7 +18,7 @@
         <surefire.version>3.1.2</surefire.version>
         <java.release.version>17</java.release.version>
         <maven.source.encoding>UTF-8</maven.source.encoding>
-        <suite-xml>testng.xml</suite-xml>
+        <suite-xml>test-suites/testng.xml</suite-xml>
     </properties>
 
     <dependencies>
