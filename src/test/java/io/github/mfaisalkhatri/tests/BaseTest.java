@@ -2,9 +2,7 @@ package io.github.mfaisalkhatri.tests;
 
 import io.github.mfaisalkhatri.browsers.BrowserManager;
 import io.github.mfaisalkhatri.browsers.Browsers;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 public class BaseTest {
 

@@ -32,4 +32,15 @@ public class BrowserNavigationTests extends BaseTest {
     }
 
 
+    @Test
+    public void testTitleAndCurrentUrl() {
+        final String websiteLink = "https://the-internet.herokuapp.com/";
+        final Page page = this.browserManager.getPage();
+        page.navigate(websiteLink);
+        assertEquals(page.url(), websiteLink);
+
+        final String pageTitle = page.title();
+        assertEquals(pageTitle, "The Internet");
+    }
+
 }

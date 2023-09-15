@@ -6,7 +6,8 @@
         <classes>
             <class name="io.github.mfaisalkhatri.tests.BrowserNavigationTests">
                 <methods>
-                    <include name="testBrowserNavigation"/>
+                    <exclude name="testBrowserNavigation"/>
+                    <include name="testTitleAndCurrentUrl"/>
                 </methods>
             </class>
         </classes>
