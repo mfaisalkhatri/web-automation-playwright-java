@@ -19,6 +19,9 @@ I have tried to answer the below questions by providing working code example in 
 1. How to run test on Firefox browser in Headless mode?
 1. How to run test on Chrome/Firefox browser in Slow Motion?
 1. How to run test on Edge browser?
+1. How to perform browser navigations?
+1. How to get the Page Title?
+1. How to get the Website URL?
 
 ## How to run the Tests?
 
