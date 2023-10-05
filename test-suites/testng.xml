@@ -4,5 +4,6 @@
     <suite-files>
         <suite-file path="testng-browsertest.xml"/>
         <suite-file path="testng-browsernavigationtests.xml"/>
+        <suite-file path="testng-formauthenticationtests.xml"/>
     </suite-files>
 </suite> <!-- Suite -->
