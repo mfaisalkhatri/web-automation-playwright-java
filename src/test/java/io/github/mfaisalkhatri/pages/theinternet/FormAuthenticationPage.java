@@ -2,6 +2,7 @@ package io.github.mfaisalkhatri.pages.theinternet;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
 
 public class FormAuthenticationPage {
 
@@ -10,7 +11,7 @@ public class FormAuthenticationPage {
     public FormAuthenticationPage(final Page page) {
         this.page = page;
     }
-    
+
     public String pageHeader() {
         return this.page.locator("h2").innerHTML();
     }
@@ -23,7 +24,7 @@ public class FormAuthenticationPage {
     }
 
     private Locator loginBtn() {
-        return this.page.getByText("Login");
+        return this.page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Login"));
     }
 
     public SecureAreaPage performLogin(final String userName, final String password) {

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Browser Navigation test suite " >
+<suite name="Browser Navigation test suite">
     <test name="Browser navigation tests using Playwright on Chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="io.github.mfaisalkhatri.tests.BrowserNavigationTests">
+            <class name="io.github.mfaisalkhatri.tests.FormAuthenticationTests">
                 <methods>
-                    <include name="testBrowserNavigation"/>
-                    <include name="testTitleAndCurrentUrl"/>
+                    <include name="testLoginFunctionality"/>
                 </methods>
             </class>
         </classes>

@@ -2,6 +2,7 @@ package io.github.mfaisalkhatri.pages.theinternet;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
 
 public class SecureAreaPage {
 
@@ -12,7 +13,7 @@ public class SecureAreaPage {
     }
 
     public String pageHeader() {
-        return this.page.getByText("Secure Area").textContent();
+        return this.page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("Secure Area").setExact(true)).textContent();
     }
 
     public String successMessage() {
@@ -23,7 +24,7 @@ public class SecureAreaPage {
         return this.page.locator("h4.subheader").innerText();
     }
 
-    private Locator logoutBtn() {
+    public Locator logoutBtn() {
         return this.page.locator("a.button");
     }
 
