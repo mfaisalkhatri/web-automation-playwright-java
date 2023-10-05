@@ -4,7 +4,7 @@ import com.microsoft.playwright.Page;
 
 public class ChallengingDomPage {
 
-    final Page page;
+    private final  Page page;
 
     public ChallengingDomPage(final Page page) {
         this.page = page;

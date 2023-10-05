@@ -4,7 +4,7 @@ import com.microsoft.playwright.Page;
 
 public class MainPage {
 
-    final Page page;
+    private final Page page;
 
     public MainPage(final Page page) {
         this.page = page;
