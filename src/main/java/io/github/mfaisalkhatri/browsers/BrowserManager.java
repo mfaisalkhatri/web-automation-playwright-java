@@ -15,11 +15,11 @@ public class BrowserManager {
         this.playwright = Playwright.create();
     }
 
-    public void createBrowser(final Browsers browsers) {
+    public void createBrowser(final String browser) {
 
-        switch (browsers) {
-            case EDGE -> setupEdgeBrowser();
-            case FIREFOX -> setupFirefoxBrowser();
+        switch (browser) {
+            case "edge" -> setupEdgeBrowser();
+            case "firefox" -> setupFirefoxBrowser();
             default -> setupChromeBrowser();
         }
     }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Browser Navigation test suite " >
+    <test name="Browser navigation tests using Playwright on Chrome" parallel="methods">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.WindowSizeTest">
+                <methods>
+                    <include name="testDifferentWindowSize"/>
+                    <include name="testDifferentWindowSizeMethodTwo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
