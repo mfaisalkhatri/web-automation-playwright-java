@@ -5,13 +5,13 @@
         <classes>
             <class name="io.github.mfaisalkhatri.tests.PlaywrightDemoTests">
                 <methods>
-                    <exclude name="testOnChromeHeadless"/>
-                    <exclude name="testOnChrome"/>
-                    <exclude name="testOnFirefoxHeadless"/>
-                    <exclude name="testOnFirefox"/>
+                    <include name="testOnChromeHeadless"/>
+                    <include name="testOnChrome"/>
+                    <include name="testOnFirefoxHeadless"/>
+                    <include name="testOnFirefox"/>
                     <include name="testOnChromeSlowMo"/>
-                    <exclude name="testOnFirefoxSlowMo"/>
-                    <exclude name="testOnEdge"/>
+                    <include name="testOnFirefoxSlowMo"/>
+                    <include name="testOnEdge"/>
                 </methods>
             </class>
         </classes>
