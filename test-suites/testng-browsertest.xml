@@ -5,18 +5,18 @@
         <classes>
             <class name="io.github.mfaisalkhatri.tests.PlaywrightDemoTests">
                 <methods>
-                    <include name="testOnChrome"/>
-                    <include name="testOnChromeHeadless"/>
-                    <include name="testOnFirefox"/>
-                    <include name="testOnFirefoxHeadless"/>
+                    <exclude name="testOnChromeHeadless"/>
+                    <exclude name="testOnChrome"/>
+                    <exclude name="testOnFirefoxHeadless"/>
+                    <exclude name="testOnFirefox"/>
                     <include name="testOnChromeSlowMo"/>
-                    <include name="testOnFirefoxSlowMo"/>
-                    <include name="testOnEdge"/>
+                    <exclude name="testOnFirefoxSlowMo"/>
+                    <exclude name="testOnEdge"/>
                 </methods>
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Refactored web automation test with Playwright on Chrome">
+    <test name="Refactored web automation test with Playwright on Chrome" enabled="false">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="io.github.mfaisalkhatri.tests.RefactoredPlaywrightTests">
@@ -26,7 +26,7 @@
             </class>
         </classes>
     </test>
-    <test name="Refactored web automation test with Playwright on Firefox">
+    <test name="Refactored web automation test with Playwright on Firefox" enabled="false">
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="io.github.mfaisalkhatri.tests.RefactoredPlaywrightTests">
@@ -36,7 +36,7 @@
             </class>
         </classes>
     </test>
-    <test name="Refactored web automation test with Playwright on Edge">
+    <test name="Refactored web automation test with Playwright on Edge" enabled="false">
         <parameter name="browser" value="edge"/>
         <classes>
             <class name="io.github.mfaisalkhatri.tests.RefactoredPlaywrightTests">

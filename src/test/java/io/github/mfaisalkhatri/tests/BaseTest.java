@@ -1,7 +1,6 @@
 package io.github.mfaisalkhatri.tests;
 
 import io.github.mfaisalkhatri.browsers.BrowserManager;
-import io.github.mfaisalkhatri.browsers.Browsers;
 import org.testng.annotations.*;
 
 public class BaseTest {
@@ -13,7 +12,7 @@ public class BaseTest {
     @BeforeClass(alwaysRun = true)
     public void setupTest(final String browser) {
         this.browserManager = new BrowserManager();
-        this.browserManager.createBrowser(Browsers.valueOf(browser.toUpperCase()));
+        this.browserManager.createBrowser((browser));
     }
 
     @AfterClass(alwaysRun = true)
