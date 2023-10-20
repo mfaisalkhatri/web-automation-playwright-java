@@ -25,6 +25,7 @@ I have tried to answer the below questions by providing working code example in 
 1. How to get the Website URL?
 1. How to type values in the textbox?
 1. How to set different window sizes? 
+1. How to double on a button?
 1. How to use Page Object Model using Playwright Java? 
 
 ## How to run the Tests?
