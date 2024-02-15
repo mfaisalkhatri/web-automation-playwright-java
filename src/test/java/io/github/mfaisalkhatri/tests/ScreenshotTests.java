@@ -7,6 +7,7 @@ import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.ZoneId;
+import java.util.Base64;
 import java.util.Date;
 import java.util.TimeZone;
 
@@ -48,5 +49,19 @@ public class ScreenshotTests extends BaseTest{
 
         assertEquals(page.url(), websiteLink);
     }
+
+    @Test
+    public void captureScreenshotToBuffer () {
+        final String websiteLink = "https://ecommerce-playground.lambdatest.io/";
+        final Page page = this.browserManager.getPage();
+        page.navigate(websiteLink);
+
+        byte[] buffer = page.screenshot();
+        System.out.println(Base64.getEncoder().encodeToString(buffer));
+
+        assertEquals(page.url(), websiteLink);
+    }
+
+    
 
 }
