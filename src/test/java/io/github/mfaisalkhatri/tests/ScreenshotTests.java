@@ -32,4 +32,21 @@ public class ScreenshotTests extends BaseTest{
         final String pageTitle = page.title();
         assertEquals(pageTitle, "The Internet");
     }
+
+
+    @Test
+    public void takeFullPageScreenshot() {
+        final String websiteLink = "https://ecommerce-playground.lambdatest.io/";
+        final Page page = this.browserManager.getPage();
+        page.navigate(websiteLink);
+
+        DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd_hh:mm:ss");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("IST"));
+
+        page.screenshot(new Page.ScreenshotOptions()
+                .setPath(Paths.get("./screenshots/screenshot_" + dateFormat.format(new Date()) + ".png")).setFullPage(true));
+
+        assertEquals(page.url(), websiteLink);
+    }
+
 }
