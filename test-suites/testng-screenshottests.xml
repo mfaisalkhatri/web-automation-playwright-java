@@ -9,6 +9,7 @@
                     <include name="takeScreenshotTest"/>
                     <include name="takeFullPageScreenshot"/>
                     <include name="captureScreenshotToBuffer"/>
+                    <include name="takeElementScreenshot"/>
                 </methods>
             </class>
         </classes>

@@ -1,6 +1,8 @@
 package io.github.mfaisalkhatri.tests;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
 import org.testng.annotations.Test;
 
 import java.nio.file.Paths;
@@ -62,6 +64,14 @@ public class ScreenshotTests extends BaseTest{
         assertEquals(page.url(), websiteLink);
     }
 
-    
+    @Test
+    public void takeElementScreenshot (){
+        final String websiteLink = "https://ecommerce-playground.lambdatest.io/";
+        final Page page = this.browserManager.getPage();
+        page.navigate(websiteLink);
+
+        page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Search For Products"))
+                .screenshot(new Locator.ScreenshotOptions().setPath(Paths.get("./screenshots/screenshot_element.png")));
+    }
 
 }
