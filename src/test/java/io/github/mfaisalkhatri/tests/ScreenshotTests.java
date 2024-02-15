@@ -28,7 +28,7 @@ public class ScreenshotTests extends BaseTest{
 
 
         assertEquals(page.url(), websiteLink);
-        
+
         final String pageTitle = page.title();
         assertEquals(pageTitle, "The Internet");
     }
