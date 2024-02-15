@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="LambdaTest ecommerce playground website test suite " parallel="tests">
+<suite name="Playwright framework example tests " parallel="tests">
     <suite-files>
         <suite-file path="testng-browsertest.xml"/>
         <suite-file path="testng-browsernavigationtests.xml"/>
         <suite-file path="testng-formauthenticationtests.xml"/>
         <suite-file path="testng-windowsizetests.xml"/>
         <suite-file path="testng-doubleclicktests.xml"/>
+        <suite-file path="testng-screenshottests.xml"/>
     </suite-files>
 </suite> <!-- Suite -->

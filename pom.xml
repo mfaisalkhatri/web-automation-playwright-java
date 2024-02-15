@@ -12,10 +12,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <playwright.version>1.38.0</playwright.version>
-        <testng.version>7.8.0</testng.version>
-        <maven.compiler.version>3.11.0</maven.compiler.version>
-        <surefire.version>3.1.2</surefire.version>
+        <playwright.version>1.41.2</playwright.version>
+        <testng.version>7.9.0</testng.version>
+        <maven.compiler.version>3.12.1</maven.compiler.version>
+        <surefire.version>3.2.5</surefire.version>
         <java.release.version>17</java.release.version>
         <maven.source.encoding>UTF-8</maven.source.encoding>
         <suite-xml>test-suites/testng.xml</suite-xml>

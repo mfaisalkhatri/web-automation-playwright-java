@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Browser Navigation test suite " >
+    <test name="Browser navigation tests using Playwright on Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.ScreenshotTests">
+                <methods>
+                    <include name="takeScreenshotTest"/>
+                    <include name="takeFullPageScreenshot"/>
+                    <include name="captureScreenshotToBuffer"/>
+                    <include name="takeElementScreenshot"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
