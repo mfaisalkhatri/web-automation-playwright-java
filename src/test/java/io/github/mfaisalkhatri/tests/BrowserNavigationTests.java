@@ -1,6 +1,8 @@
 package io.github.mfaisalkhatri.tests;
 
+import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.WaitUntilState;
 import io.github.mfaisalkhatri.pages.theinternet.ChallengingDomPage;
 import io.github.mfaisalkhatri.pages.theinternet.MainPage;
 import org.testng.annotations.Test;
@@ -21,12 +23,18 @@ public class BrowserNavigationTests extends BaseTest {
         assertEquals(challengingDomPage.getPageHeader(), "Challenging DOM");
 
         page.goBack();
+        //page.goBack(new Page.GoBackOptions().setWaitUntil(WaitUntilState.NETWORKIDLE));
+       // page.goBack(new Page.GoBackOptions().setTimeout(50));
         assertEquals(mainPage.getPageHeader(), "Available Examples");
 
         page.goForward();
+        //page.goForward(new Page.GoForwardOptions().setWaitUntil(WaitUntilState.LOAD));
+        //page.goForward(new Page.GoForwardOptions().setTimeout(40));
         assertEquals(challengingDomPage.getPageHeader(), "Challenging DOM");
 
         page.reload();
+        //page.reload(new Page.ReloadOptions().setTimeout(60));
+        //page.reload(new Page.ReloadOptions().setWaitUntil(WaitUntilState.COMMIT));
         assertEquals(challengingDomPage.getPageHeader(), "Challenging DOM");
 
     }
