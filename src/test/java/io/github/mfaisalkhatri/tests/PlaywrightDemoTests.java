@@ -4,7 +4,6 @@ import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
-import com.microsoft.playwright.options.WaitUntilState;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -120,9 +119,9 @@ public class PlaywrightDemoTests {
         //page.reload(new Page.ReloadOptions().setWaitUntil(WaitUntilState.COMMIT));
         assertEquals(challengingDomPageHeader, "Challenging DOM");
 
-        String currentPageUrl = page.url();
-        String websiteLink = "https://the-internet.herokuapp.com/challenging_dom";
-        assertEquals(page.url(), websiteLink);
+        final String currentPageUrl = page.url();
+        final String websiteLink = "https://the-internet.herokuapp.com/challenging_dom";
+        assertEquals(currentPageUrl, websiteLink);
 
         browser.close();
 
