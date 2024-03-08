@@ -37,6 +37,7 @@ public class BrowserNavigationTests extends BaseTest {
         //page.reload(new Page.ReloadOptions().setWaitUntil(WaitUntilState.COMMIT));
         assertEquals(challengingDomPage.getPageHeader(), "Challenging DOM");
 
+
     }
 
 
