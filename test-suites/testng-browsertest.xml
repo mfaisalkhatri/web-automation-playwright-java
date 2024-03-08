@@ -12,6 +12,7 @@
                     <include name="testOnChromeSlowMo"/>
                     <include name="testOnFirefoxSlowMo"/>
                     <include name="testOnEdge"/>
+                    <include name="testBrowserNavigation"/>
                 </methods>
             </class>
         </classes>
