@@ -22,6 +22,7 @@ public class FormAuthenticationTests extends BaseTest {
 
         final var formAuthenticationPage = new FormAuthenticationPage(page);
         assertEquals(formAuthenticationPage.pageHeader(), "Login Page");
+
         final var securePage = formAuthenticationPage.performLogin(userName, password);
         assertTrue(securePage.successMessage().contains("You logged into a secure area!"));
         assertEquals(securePage.pageHeader(), " Secure Area");
