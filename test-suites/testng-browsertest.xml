@@ -16,7 +16,7 @@
                 </methods>
             </class>
         </classes>
-    </test> <!-- Test -->
+    </test>
     <test name="Refactored web automation test with Playwright on Chrome" enabled="false">
         <parameter name="browser" value="chrome"/>
         <classes>
@@ -47,5 +47,4 @@
             </class>
         </classes>
     </test>
-
-</suite> <!-- Suite -->
+</suite>

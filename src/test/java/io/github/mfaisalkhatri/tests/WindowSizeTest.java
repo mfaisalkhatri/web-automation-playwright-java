@@ -1,7 +1,6 @@
 package io.github.mfaisalkhatri.tests;
 
 import com.microsoft.playwright.*;
-import io.github.mfaisalkhatri.browsers.BrowserManager;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;

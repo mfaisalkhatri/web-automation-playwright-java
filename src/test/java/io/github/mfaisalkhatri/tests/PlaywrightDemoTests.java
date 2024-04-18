@@ -79,16 +79,16 @@ public class PlaywrightDemoTests {
         browser.close();
     }
 
-        @Test
-        public void testOnEdge() {
-            final Playwright playwright = Playwright.create();
-            final Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setChannel("msedge"));
-                final Page page = browser.newPage();
-                page.navigate("https://ecommerce-playground.lambdatest.io/");
-                final String pageTitle = page.title();
-                assertEquals(pageTitle, "Your Store");
-                browser.close();
-        }
+    @Test
+    public void testOnEdge() {
+        final Playwright playwright = Playwright.create();
+        final Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setChannel("msedge"));
+        final Page page = browser.newPage();
+        page.navigate("https://ecommerce-playground.lambdatest.io/");
+        final String pageTitle = page.title();
+        assertEquals(pageTitle, "Your Store");
+        browser.close();
+    }
 
     @Test
     public void testBrowserNavigation() {
@@ -127,4 +127,3 @@ public class PlaywrightDemoTests {
 
     }
 }
-

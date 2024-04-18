@@ -20,4 +20,3 @@ public class BaseTest {
         this.browserManager.closeBrowser();
     }
 }
-
