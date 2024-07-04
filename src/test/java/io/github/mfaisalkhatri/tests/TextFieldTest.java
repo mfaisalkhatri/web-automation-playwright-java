@@ -76,4 +76,23 @@ public class TextFieldTest {
 
         assertThat(messageField).hasValue(messageTwo);
     }
+
+    @Test
+    public void testKeyPress() {
+        page.navigate("https://the-internet.herokuapp.com/key_presses");
+        Locator textBox = page.locator("#target");
+        textBox.press("Alt");
+        Locator resultText = page.locator("p#result");
+
+        assertThat(resultText).containsText("ALT");
+
+        textBox.press("Shift");
+        assertThat(resultText).containsText("SHIFT");
+
+        textBox.press("N");
+        assertThat(resultText).containsText("N");
+
+        textBox.press("9");
+        assertThat(resultText).containsText("9");
+    }
 }
