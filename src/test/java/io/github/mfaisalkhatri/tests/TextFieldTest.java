@@ -23,4 +23,13 @@ public class TextFieldTest {
         Locator firstNameField = page.getByLabel("First name");
         firstNameField.fill("Faisal");
     }
+
+    @Test
+    public void locateFirstNameByPlaceholder() {
+        page.navigate("https://practicesoftwaretesting.com/contact");
+        Locator firstNameField = page.getByPlaceholder("Your first name *");
+        firstNameField.fill("John");
+
+
+    }
 }
