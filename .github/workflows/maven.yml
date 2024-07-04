@@ -33,6 +33,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+
+    - name: Install Edge browser
+      run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install msedge"
         
     - name: Build with Maven
       run: mvn clean install
