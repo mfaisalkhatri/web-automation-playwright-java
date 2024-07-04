@@ -1,8 +1,11 @@
 package io.github.mfaisalkhatri.tests;
 
 import com.microsoft.playwright.*;
+import com.microsoft.playwright.options.AriaRole;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class TextFieldTest {
 
@@ -29,5 +32,48 @@ public class TextFieldTest {
         page.navigate("https://practicesoftwaretesting.com/contact");
         Locator firstNameField = page.getByPlaceholder("Your first name *");
         firstNameField.fill("John");
+    }
+
+    @Test
+    public void locateFirstNameByRole() {
+        page.navigate("https://practicesoftwaretesting.com/contact");
+        Locator firstNameField = page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First name"));
+        firstNameField.fill("Tom");
+    }
+
+    @Test
+    public void testFocusOnField() {
+        page.navigate("https://practicesoftwaretesting.com/contact");
+        Locator emailAddressField = page.getByLabel("Email address");
+        emailAddressField.focus();
+        assertThat(emailAddressField).isFocused();
+    }
+
+    @Test
+    public void testGetValuesFromTextField() {
+        page.navigate("https://practicesoftwaretesting.com/contact");
+        Locator emailAddressField = page.getByLabel("Email address");
+
+        String emailAddress = "faisal.k@demo.com";
+        emailAddressField.fill(emailAddress);
+
+        String emailValue = emailAddressField.inputValue();
+        System.out.println(emailValue);
+
+        assertThat(emailAddressField).hasValue(emailValue);
+    }
+
+    @Test
+    public void testClearFieldValues() {
+        page.navigate("https://practicesoftwaretesting.com/contact");
+        Locator messageField = page.getByLabel("Message *");
+        String messageOne = "This is the first message";
+        messageField.fill(messageOne);
+
+        messageField.clear();
+        String messageTwo = "This is the second message";
+        messageField.fill(messageTwo);
+
+        assertThat(messageField).hasValue(messageTwo);
     }
 }

@@ -9,5 +9,6 @@
         <suite-file path="testng-doubleclicktests.xml"/>
         <suite-file path="testng-screenshottests.xml"/>
         <suite-file path="testng-dropdowntests.xml"/>
+        <suite-file path="testng-textfielddemo.xml"/>
     </suite-files>
 </suite>
