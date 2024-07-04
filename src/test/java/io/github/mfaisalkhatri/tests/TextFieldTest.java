@@ -29,7 +29,5 @@ public class TextFieldTest {
         page.navigate("https://practicesoftwaretesting.com/contact");
         Locator firstNameField = page.getByPlaceholder("Your first name *");
         firstNameField.fill("John");
-
-
     }
 }
