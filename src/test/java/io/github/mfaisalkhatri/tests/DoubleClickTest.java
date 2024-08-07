@@ -21,5 +21,8 @@ public class DoubleClickTest {
         final ButtonsPage buttonsPage = new ButtonsPage(page);
         buttonsPage.doubleClickAndCheckAlertText("You double clicked me.. Thank You..");
 
+        browser.close();
+        playwright.close();
+
     }
 }

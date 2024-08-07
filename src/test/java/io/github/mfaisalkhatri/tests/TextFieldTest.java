@@ -96,4 +96,11 @@ public class TextFieldTest {
         textBox.press("9");
         assertThat(resultText).containsText("9");
     }
+    
+    @AfterClass
+    public void tearDown() {
+        this.page.close();
+        this.playwright.close();
+    }
+
 }

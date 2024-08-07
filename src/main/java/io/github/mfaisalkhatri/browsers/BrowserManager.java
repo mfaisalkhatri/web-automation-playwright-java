@@ -46,6 +46,7 @@ public class BrowserManager {
 
     public void closeBrowser() {
         this.browser.close();
+        this.playwright.close();
     }
 
 

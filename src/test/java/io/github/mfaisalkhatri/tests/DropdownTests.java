@@ -86,6 +86,7 @@ public class DropdownTests {
 
     @AfterClass
     public void tearDown() {
+        this.page.close();
         this.playwright.close();
     }
 }
