@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Playwright demo test suite ">
+    <test name="Radio buttons demo on Chrome">
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.RadioButtonTests">
+                <methods>
+                    <include name="testRadioButtonIsChecked"/>
+                    <include name="testRadioButtonIsNotChecked"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
