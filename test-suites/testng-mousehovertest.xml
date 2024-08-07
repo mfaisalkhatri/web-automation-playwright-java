@@ -6,6 +6,7 @@
             <class name="io.github.mfaisalkhatri.tests.MouseHoverTest">
                 <methods>
                     <include name="testMouseHover"/>
+                    <include name="testMouseHoverOnMyAccountLink"/>
                 </methods>
             </class>
         </classes>

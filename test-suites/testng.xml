@@ -12,5 +12,6 @@
         <suite-file path="testng-textfielddemo.xml"/>
         <suite-file path="testng-mousehovertest.xml"/>
         <suite-file path="testng-playwrightdemotests.xml"/>
+        <suite-file path="testng-radiobuttons.xml"/>
     </suite-files>
 </suite>
