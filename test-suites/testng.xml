@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Playwright framework example tests " parallel="tests">
+<suite name="Playwright framework example tests ">
     <suite-files>
         <suite-file path="testng-browsertest.xml"/>
         <suite-file path="testng-browsernavigationtests.xml"/>
@@ -10,5 +10,7 @@
         <suite-file path="testng-screenshottests.xml"/>
         <suite-file path="testng-dropdowntests.xml"/>
         <suite-file path="testng-textfielddemo.xml"/>
+        <suite-file path="testng-mousehovertest.xml"/>
+        <suite-file path="testng-playwrightdemotests.xml"/>
     </suite-files>
 </suite>
