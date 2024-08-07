@@ -2,6 +2,7 @@ package io.github.mfaisalkhatri.tests;
 
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.AriaRole;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
