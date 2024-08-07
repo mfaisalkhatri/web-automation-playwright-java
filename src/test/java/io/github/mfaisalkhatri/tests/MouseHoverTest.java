@@ -21,7 +21,6 @@ public class MouseHoverTest {
         this.page = browser.newPage();
     }
 
-
     @Test
     public void testMouseHover() {
         page.navigate("https://the-internet.herokuapp.com/hovers");
@@ -36,5 +35,4 @@ public class MouseHoverTest {
         this.page.close();
         this.playwright.close();
     }
-
 }
