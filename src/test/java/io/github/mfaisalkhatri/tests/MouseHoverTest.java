@@ -13,7 +13,6 @@ public class MouseHoverTest {
     private Playwright playwright;
     private Page page;
 
-
     @BeforeClass
     public void setup() {
         this.playwright = Playwright.create();
@@ -28,6 +27,17 @@ public class MouseHoverTest {
         firstImage.hover();
         Locator userNameText = page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("name: user1"));
         assertThat(userNameText).hasText("name: user1");
+    }
+
+    @Test
+    public void testMouseHoverOnMyAccountLink() {
+        page.navigate("https://ecommerce-playground.lambdatest.io/");
+        Locator myAccountLink = page.locator("#widget-navbar-217834 > ul > li:nth-child(6) > a");
+        myAccountLink.hover();
+        Locator loginLink = page.locator("#widget-navbar-217834 > ul > li:nth-child(6) > ul > li:nth-child(1) > a");
+        loginLink.click();
+        Locator pageHeader = page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("Returning Customer"));
+        assertThat(pageHeader).hasText("Returning Customer");
     }
 
     @AfterClass
