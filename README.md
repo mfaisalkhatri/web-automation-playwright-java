@@ -27,7 +27,8 @@ I have tried to answer the below questions by providing working code example in 
 1. How to set different window sizes? 
 1. How to double on a button?
 1. How to use Page Object Model using Playwright Java?
-1. How to perform browser navigations?
+1. How to perform browser navigation?
+1. How to perform Mouse hover?
 
 ## How to run the Tests?
 
@@ -45,6 +46,7 @@ I have tried to answer the below questions by providing working code example in 
 - [Playwright Java Tutorial: Web Automation Testing | Installation and Setup](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-installation-and-setup-545c9c7661c8)
 - [Playwright Java Tutorial: Web Automation Testing | Writing and running tests on Chrome, Firefox and Edge browsers](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-writing-and-running-tests-on-chrome-firefox-and-d2446b9a69ce)
 - [Playwright Java Tutorial: Web Automation Testing | How to perform browser navigation?](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-how-to-perform-browser-navigation-043f14af5c97)
+- [Playwright Java Tutorial: Web Automation Testing | How to work with text fields?](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-how-to-work-with-text-fields-6cc9982ed7b2)
 
 ## :question: Need Assistance?
 

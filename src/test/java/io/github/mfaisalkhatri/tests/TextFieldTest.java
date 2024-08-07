@@ -2,6 +2,7 @@ package io.github.mfaisalkhatri.tests;
 
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.AriaRole;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -95,4 +96,11 @@ public class TextFieldTest {
         textBox.press("9");
         assertThat(resultText).containsText("9");
     }
+    
+    @AfterClass
+    public void tearDown() {
+        this.page.close();
+        this.playwright.close();
+    }
+
 }

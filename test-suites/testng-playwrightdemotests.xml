@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Playwright Demo Tests" parallel="tests">
+    <test name="Web automation tests using Playwright on Chrome">
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.PlaywrightDemoTests">
+                <methods>
+                    <include name="testOnChromeHeadless"/>
+                    <include name="testOnChrome"/>
+                    <include name="testOnChromeSlowMo"/>
+                    <include name="testBrowserNavigation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Web automation tests using Playwright on Firefox">
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.PlaywrightDemoTests">
+                <methods>
+                    <include name="testOnFirefoxHeadless"/>
+                    <include name="testOnFirefox"/>
+                    <include name="testOnFirefoxSlowMo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Web automation tests using Playwright on Edge">
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.PlaywrightDemoTests">
+                <methods>
+                    <include name="testOnEdge"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

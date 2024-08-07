@@ -21,6 +21,7 @@ public class WindowSizeTest {
         final String pageHeaderText = pageHeader.textContent();
         assertEquals(pageHeaderText, "Selenium Playground");
         browser.close();
+        playwright.close();
 
     }
 
@@ -40,6 +41,7 @@ public class WindowSizeTest {
         final String pageHeaderText = pageHeader.textContent();
         assertEquals(pageHeaderText, "Selenium Playground");
         browser.close();
+        playwright.close();
 
     }
 

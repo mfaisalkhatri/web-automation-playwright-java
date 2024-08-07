@@ -19,6 +19,7 @@ public class PlaywrightDemoTests {
         final String pageTitle = page.title();
         assertEquals(pageTitle, "Your Store");
         browser.close();
+        playwright.close();
     }
 
 
@@ -32,6 +33,7 @@ public class PlaywrightDemoTests {
         final String pageTitle = page.title();
         assertEquals(pageTitle, "Your Store");
         browser.close();
+        playwright.close();
     }
 
     @Test
@@ -43,6 +45,7 @@ public class PlaywrightDemoTests {
         final String pageTitle = page.title();
         assertEquals(pageTitle, "Your Store");
         browser.close();
+        playwright.close();
     }
 
     @Test
@@ -54,6 +57,7 @@ public class PlaywrightDemoTests {
         final String pageTitle = page.title();
         assertEquals(pageTitle, "Your Store");
         browser.close();
+        playwright.close();
 
     }
 
@@ -66,6 +70,7 @@ public class PlaywrightDemoTests {
         final String pageTitle = page.title();
         assertEquals(pageTitle, "Your Store");
         browser.close();
+        playwright.close();
     }
 
     @Test
@@ -77,6 +82,7 @@ public class PlaywrightDemoTests {
         final String pageTitle = page.title();
         assertEquals(pageTitle, "Your Store");
         browser.close();
+        playwright.close();
     }
 
     @Test
@@ -88,6 +94,7 @@ public class PlaywrightDemoTests {
         final String pageTitle = page.title();
         assertEquals(pageTitle, "Your Store");
         browser.close();
+        playwright.close();
     }
 
     @Test
@@ -124,6 +131,7 @@ public class PlaywrightDemoTests {
         assertEquals(currentPageUrl, websiteLink);
 
         browser.close();
+        playwright.close();
 
     }
 }
