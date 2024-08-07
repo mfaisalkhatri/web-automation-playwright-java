@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <playwright.version>1.45.0</playwright.version>
+        <playwright.version>1.45.1</playwright.version>
         <testng.version>7.10.2</testng.version>
         <maven.compiler.version>3.13.0</maven.compiler.version>
         <surefire.version>3.3.0</surefire.version>
