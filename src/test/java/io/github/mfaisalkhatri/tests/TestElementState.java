@@ -48,7 +48,23 @@ public class TestElementState {
 
     @Test
     public void testElementIsSelected() {
+        page.navigate("https://www.lambdatest.com/selenium-playground/radiobutton-demo");
+        Locator maleRadioButton = page.getByLabel("Male").first();
+        maleRadioButton.click();
+        assertThat(maleRadioButton).isChecked();
+    }
 
+    @Test
+    public void testRadioButtonIsDisabled() {
+        page.navigate("https://www.lambdatest.com/selenium-playground/radiobutton-demo");
+        Locator disabledRadioButton = page.getByLabel("Disabled Radio Button").first();
+        assertThat(disabledRadioButton).isDisabled();
+    }
+    @Test
+    public void testTextBoxIsEditable() {
+        page.navigate("https://www.lambdatest.com/selenium-playground/simple-form-demo");
+        Locator enterMessagField = page.getByPlaceholder("Please enter your Message");
+        assertThat(enterMessagField).isEditable();
     }
 
     @AfterClass

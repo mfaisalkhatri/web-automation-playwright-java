@@ -8,6 +8,9 @@
                     <include name="testElementIsDisabled"/>
                     <include name="testElementIsEnabled"/>
                     <include name="testElementIsDisplayed"/>
+                    <include name="testElementIsSelected"/>
+                    <include name="testRadioButtonIsDisabled"/>
+                    <include name="testTextBoxIsEditable"/>
                 </methods>
             </class>
         </classes>
