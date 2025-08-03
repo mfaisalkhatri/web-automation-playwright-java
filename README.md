@@ -1,4 +1,4 @@
-![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
+[![Java CI with Maven](https://github.com/mfaisalkhatri/web-automation-playwright-java/actions/workflows/maven.yml/badge.svg)](https://github.com/mfaisalkhatri/web-automation-playwright-java/actions/workflows/maven.yml)
 
 ## Don't forget to give a :star: to make the project popular.
 
@@ -65,4 +65,4 @@ I have tried to answer the below questions by providing working code example in 
 - [LambdaTest Blogs](https://www.lambdatest.com/blog/author/mfaisalkhatri/)
 - [My Website](https://mfaisalkhatri.github.io)
 
-### :bookmark: Checkout videos related to Software Testing and Test automation tools on [Testing Talks with Faisal Khatri](https://www.youtube.com/@faisalkhatriqa)
+### :bookmark: Checkout tutorial videos related to Software Testing and Test automation tools on [Testing Talks with Faisal Khatri](https://www.youtube.com/@faisalkhatriqa)
