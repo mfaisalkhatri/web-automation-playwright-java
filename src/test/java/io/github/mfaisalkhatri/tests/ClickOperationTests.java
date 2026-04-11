@@ -38,8 +38,6 @@ public class ClickOperationTests {
     }
 
 
-
-
     @AfterClass
     public void tearDown() {
         this.page.close ();
