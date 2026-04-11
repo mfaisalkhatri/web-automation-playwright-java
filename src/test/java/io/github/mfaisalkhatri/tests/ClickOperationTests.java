@@ -4,7 +4,6 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
-import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.AriaRole;
@@ -27,13 +26,15 @@ public class ClickOperationTests {
 
     @Test
     public void testLeftClick () {
-        page.navigate ("https://the-internet.herokuapp.com/");
-        Locator challenginDomLink = page.getByRole (AriaRole.LINK,
-            new Page.GetByRoleOptions ().setName ("Challenging DOM"));
-        challenginDomLink.click ();
+        this.page.navigate ("https://the-internet.herokuapp.com/");
+        this.page.getByRole (AriaRole.LINK, new Page.GetByRoleOptions ().setName ("Challenging DOM"))
+            .click ();
+        //Locator challenginDomLink = page.getByRole (AriaRole.LINK,
+        //  new Page.GetByRoleOptions ().setName ("Challenging DOM"));
+        //challenginDomLink.click ();
 
         assertThat (
-            page.getByRole (AriaRole.HEADING, new Page.GetByRoleOptions ().setName ("Challenging DOM"))).isVisible ();
+            this.page.getByRole (AriaRole.HEADING, new Page.GetByRoleOptions ().setName ("Challenging DOM"))).isVisible ();
     }
 
 
