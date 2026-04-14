@@ -89,12 +89,6 @@ public class DropdownTests {
 
         assertThat(dropdownField).hasValues (new Pattern[]{Pattern.compile ("cat"),
             Pattern.compile ("cheetah"), Pattern.compile ("deer")});
-        //dropdownField.selectOption(new SelectOption[]{new SelectOption().setLabel("New York"),
-            //new SelectOption().setLabel("Texas"), new SelectOption().setValue("California"),
-            //new SelectOption().setIndex(7)});
-
-        //assertThat(dropdownField).hasValues(new Pattern[]{Pattern.compile("California"), Pattern.compile("New York")
-         //   , Pattern.compile("Texas"), Pattern.compile("Washington")});
     }
 
     @AfterClass
