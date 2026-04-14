@@ -80,12 +80,21 @@ public class DropdownTests {
 
     @Test
     public void testMultiSelectOptions() {
-        this.page.navigate("https://www.lambdatest.com/selenium-playground/select-dropdown-demo");
+        this.page.navigate("https://testautomationpractice.blogspot.com/");
 
-        final Locator dropdownField = this.page.locator("#multi-select");
-        dropdownField.selectOption(new SelectOption[]{new SelectOption().setLabel("New York"), new SelectOption().setLabel("Texas"), new SelectOption().setValue("California"), new SelectOption().setIndex(7)});
+        final Locator dropdownField = this.page.getByRole (AriaRole.LISTBOX, new Page.GetByRoleOptions ().setName (
+            "Sorted List:"));
+        dropdownField.selectOption (new SelectOption [] {new SelectOption ().setLabel ("Cat"),
+            new SelectOption ().setLabel ("Cheetah"), new SelectOption ().setIndex (2)});
 
-        assertThat(dropdownField).hasValues(new Pattern[]{Pattern.compile("California"), Pattern.compile("New York"), Pattern.compile("Texas"), Pattern.compile("Washington")});
+        assertThat(dropdownField).hasValues (new Pattern[]{Pattern.compile ("cat"),
+            Pattern.compile ("cheetah"), Pattern.compile ("deer")});
+        //dropdownField.selectOption(new SelectOption[]{new SelectOption().setLabel("New York"),
+            //new SelectOption().setLabel("Texas"), new SelectOption().setValue("California"),
+            //new SelectOption().setIndex(7)});
+
+        //assertThat(dropdownField).hasValues(new Pattern[]{Pattern.compile("California"), Pattern.compile("New York")
+         //   , Pattern.compile("Texas"), Pattern.compile("Washington")});
     }
 
     @AfterClass
