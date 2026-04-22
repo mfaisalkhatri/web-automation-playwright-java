@@ -3,10 +3,13 @@ package io.github.mfaisalkhatri.tests;
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.AriaRole;
 import com.microsoft.playwright.options.BoundingBox;
+import com.microsoft.playwright.options.KeyboardModifier;
 import com.microsoft.playwright.options.MouseButton;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static org.testng.Assert.assertEquals;
@@ -95,6 +98,23 @@ public class ClickOperationTests {
 
         slider.click(new Locator.ClickOptions().setPosition(x, y));
         this.page.waitForTimeout(3000);
+
+    }
+
+    @Test
+    public void testClickWithModifiers() {
+        page.navigate("https://jqueryui.com/selectable/");
+        FrameLocator frame = page.frameLocator(".demo-frame");
+
+        Locator items = frame.locator("#selectable li");
+
+        items.nth(0).click(new Locator.ClickOptions()
+                .setModifiers(List.of(KeyboardModifier.CONTROL)));
+
+        items.nth(3).click(new Locator.ClickOptions()
+                .setModifiers(List.of(KeyboardModifier.CONTROL)));
+
+        page.waitForTimeout(4000);
 
     }
 
