@@ -142,8 +142,35 @@ public class ClickOperationTests {
         this.page.navigate ("https://the-internet.herokuapp.com/");
         this.page.getByRole (AriaRole.LINK, new Page.GetByRoleOptions ().setName ("Drag and Drop"))
             .click ();
-        this.page.locator ("#column-a").dragTo (this.page.locator ("#column-b"));
-        assertThat(this.page.locator ("#column-a")).containsText ("B");
+        this.page.locator ("#column-a")
+            .dragTo (this.page.locator ("#column-b"));
+        assertThat (this.page.locator ("#column-a")).containsText ("B");
+
+    }
+
+    @Test
+    public void testDragAndDropManually () {
+        this.page.navigate ("https://the-internet.herokuapp.com/");
+        this.page.getByRole (AriaRole.LINK, new Page.GetByRoleOptions ().setName ("Drag and Drop"))
+            .click ();
+        this.page.locator ("#column-a")
+            .hover ();
+        this.page.mouse ()
+            .down ();
+        this.page.locator ("#column-b")
+            .hover ();
+        this.page.mouse ()
+            .up ();
+        assertThat (this.page.locator ("#column-a")).containsText ("B");
+    }
+
+    @Test
+    public void testProgrammaticClick () {
+        this.page.navigate ("https://the-internet.herokuapp.com/");
+        this.page.getByRole (AriaRole.LINK, new Page.GetByRoleOptions ().setName ("Checkboxes"))
+            .dispatchEvent ("click");
+
+        assertThat (this.page.getByRole (AriaRole.HEADING)).containsText ("Checkboxes");
 
     }
 
