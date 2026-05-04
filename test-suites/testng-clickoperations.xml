@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Playwright Demo Tests ">
+    <test name="Click operation tests">
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.ClickOperationTests">
+                <methods>
+                    <include name="testLeftClick"/>
+                    <include name="testRightClick"/>
+                    <include name="testDoubleClick"/>
+                    <include name="testMouseHover"/>
+                    <include name="testForceMouseClick"/>
+                    <include name="testPositionBasedClick"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
