@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static org.testng.Assert.assertEquals;
@@ -110,21 +111,24 @@ public class ClickOperationTests {
         FrameLocator frame = this.page.frameLocator (".demo-frame");
 
         Locator items = frame.locator ("#selectable li");
+        Locator itemOne = items.nth (0);
+        Locator itemFour = items.nth (3);
 
-        items.nth (0)
-            .click (new Locator.ClickOptions ().setModifiers (List.of (KeyboardModifier.CONTROL)));
+        itemOne.click (new Locator.ClickOptions ().setModifiers (List.of (KeyboardModifier.CONTROL)));
 
-        items.nth (3)
-            .click (new Locator.ClickOptions ().setModifiers (List.of (KeyboardModifier.CONTROL)));
+        itemFour.click (new Locator.ClickOptions ().setModifiers (List.of (KeyboardModifier.CONTROL)));
 
-        this.page.waitForTimeout (2000);
+        assertThat (itemOne).hasClass (Pattern.compile (".*ui-selected.*"));
+        assertThat (itemFour).hasClass (Pattern.compile (".*ui-selected.*"));
 
-        this.page.navigate ("https://the-internet.herokuapp.com/");
-        this.page.getByRole (AriaRole.LINK, new Page.GetByRoleOptions ().setName ("File Download")
-                .setExact (true))
-            .click (new Locator.ClickOptions ().setModifiers (List.of (KeyboardModifier.SHIFT)));
+        //  this.page.waitForTimeout (2000);
 
-        this.page.waitForTimeout (2000);
+        //        this.page.navigate ("https://the-internet.herokuapp.com/");
+        //        this.page.getByRole (AriaRole.LINK, new Page.GetByRoleOptions ().setName ("File Download")
+        //                .setExact (true))
+        //            .click (new Locator.ClickOptions ().setModifiers (List.of (KeyboardModifier.SHIFT)));
+        //
+        //        this.page.waitForTimeout (2000);
 
     }
 
