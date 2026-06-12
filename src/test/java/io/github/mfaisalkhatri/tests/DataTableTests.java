@@ -1,15 +1,15 @@
 package io.github.mfaisalkhatri.tests;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
-import static org.testng.Assert.assertEquals;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import com.microsoft.playwright.options.AriaRole;
 import io.github.mfaisalkhatri.pages.theinternet.DataTablePage;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class DataTableTests {
@@ -18,7 +18,7 @@ public class DataTableTests {
     private Page          page;
     private DataTablePage dataTablePage;
 
-    @BeforeMethod
+    @BeforeTest
     public void setup () {
         this.playwright = Playwright.create ();
         final Browser browser = this.playwright.chromium ()
@@ -29,10 +29,18 @@ public class DataTableTests {
     }
 
     @Test
-    public void testRowNumber () {
+    public void testRowNumbers () {
         this.page.navigate ("https://the-internet.herokuapp.com/tables");
         assertThat (this.dataTablePage.getTotalRowsInTable (this.dataTablePage.tableOne ())).hasCount (4);
         assertThat (this.dataTablePage.getTotalRowsInTable (this.dataTablePage.tableTwo ())).hasCount (4);
+    }
+
+    @Test
+    public void testColumnNumbers () {
+        this.page.navigate ("https://the-internet.herokuapp.com/tables");
+        assertThat (this.dataTablePage.getColumnHeadersOfTable (this.dataTablePage.tableOne ())).hasCount (6);
+        assertThat (this.dataTablePage.getColumnHeadersOfTable (this.dataTablePage.tableTwo ())).hasCount (6);
+
     }
 
     @Test
@@ -54,12 +62,25 @@ public class DataTableTests {
             expectedColumnHeaders);
     }
 
+    @Test
+    public void testTableData () {
+        this.page.navigate ("https://the-internet.herokuapp.com/tables");
+        assertThat (this.dataTablePage.getCell (this.dataTablePage.tableOne (), 0, 0)).hasText ("Smith");
+        assertThat (this.dataTablePage.getCell (this.dataTablePage.tableOne (), 0, 1)).hasText ("John");
+        assertThat (this.dataTablePage.getCell (this.dataTablePage.tableOne (), 0, 2)).hasText ("jsmith@gmail.com");
+        assertThat (this.dataTablePage.getCell (this.dataTablePage.tableOne (), 0, 3)).hasText ("$50.00");
+        assertThat (this.dataTablePage.getCell (this.dataTablePage.tableOne (), 0, 4)).hasText (
+            "http://www.jsmith.com");
+        assertThat (this.dataTablePage.getCell (this.dataTablePage.tableOne (), 0, 5).getByRole (AriaRole.LINK).first ()).hasAttribute ("href", "#edit");
+        assertThat (this.dataTablePage.getCell (this.dataTablePage.tableOne (), 0, 5).getByRole (AriaRole.LINK).nth(1)).hasAttribute ("href", "#delete");
 
+        assertThat (this.dataTablePage.getCell (this.dataTablePage.tableTwo (), 3, 1)).hasText ("Tim");
+        assertThat (this.dataTablePage.getCell (this.dataTablePage.tableTwo (), 3, 1)).hasText ("Tim");
+    }
 
-    @AfterMethod
+    @AfterTest
     public void tearDown () {
         this.page.close ();
         this.playwright.close ();
     }
-
 }

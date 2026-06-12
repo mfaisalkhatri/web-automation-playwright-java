@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Working with Data Tables using Playwright Java">
+    <test name="Data table tests">
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.DataTableTests">
+                <methods>
+                    <include name="testRowNumbers"/>
+                    <include name="testColumnNumbers"/>
+                    <include name="testPrintTableRecords"/>
+                    <include name="testTableOneColumnHeaders"/>
+                    <include name="testTableData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

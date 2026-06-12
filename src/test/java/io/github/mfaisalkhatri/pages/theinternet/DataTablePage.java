@@ -39,4 +39,12 @@ public class DataTablePage {
     public Locator getColumnHeadersOfTable (final Locator table) {
         return table.getByRole (AriaRole.COLUMNHEADER);
     }
+
+    public Locator getCell (final Locator table, final int rowNumber, final int columnNumber) {
+        return table.locator ("tbody")
+            .getByRole (AriaRole.ROW)
+            .nth (rowNumber)
+            .locator ("td")
+            .nth (columnNumber);
+    }
 }
