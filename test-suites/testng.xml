@@ -14,5 +14,6 @@
         <suite-file path="testng-playwrightdemotests.xml"/>
         <suite-file path="testng-radiobuttons.xml"/>
         <suite-file path="testng-elementstatetest.xml"/>
+        <suite-file path="testng-datatabletest.xml"/>
     </suite-files>
 </suite>
