@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 
 public class DataTableTests {
 
-    private Playwright playwright;
-    private Page       page;
+    private Playwright    playwright;
+    private Page          page;
     private DataTablePage dataTablePage;
 
     @BeforeMethod
@@ -27,12 +27,30 @@ public class DataTableTests {
         this.page = browser.newPage ();
         this.dataTablePage = new DataTablePage (this.page);
     }
+
     @Test
-    public void testRowNumber() {
-        this.page.navigate("https://the-internet.herokuapp.com/tables");
-        assertEquals(this.dataTablePage.getTotalRowsInTable (1),5);
-        assertEquals(this.dataTablePage.getTotalRowsInTable (2),5);
+    public void testRowNumber () {
+        this.page.navigate ("https://the-internet.herokuapp.com/tables");
+        assertThat (this.dataTablePage.getTotalRowsInTable (this.dataTablePage.tableOne ())).hasCount (5);
+        assertThat (this.dataTablePage.getTotalRowsInTable (this.dataTablePage.tableTwo ())).hasCount (5);
     }
+
+    @Test
+    public void testPrintTableRecords () {
+        this.page.navigate ("https://the-internet.herokuapp.com/tables");
+        System.out.println ("Printing records of Table 1");
+        this.dataTablePage.tableRecords (1);
+        System.out.println ("Printing records of Table 2");
+        this.dataTablePage.tableRecords (2);
+    }
+
+//    @Test
+//    public void testTableOneColumnHeaders () {
+//        this.page.navigate ("https://the-internet.herokuapp.com/tables");
+//        assertEquals (this.dataTablePage.getColumnsOfTableOne (),
+//            "Last Name\tFirst Name\tEmail\tDue\tWeb Site\tAction");
+//
+//    }
 
     @AfterMethod
     public void tearDown () {
