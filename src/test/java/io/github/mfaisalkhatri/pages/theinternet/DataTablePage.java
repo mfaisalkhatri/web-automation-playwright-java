@@ -1,5 +1,8 @@
 package io.github.mfaisalkhatri.pages.theinternet;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
@@ -23,42 +26,17 @@ public class DataTablePage {
     }
 
     public Locator getTotalRowsInTable (final Locator table) {
-        return table.getByRole (AriaRole.ROW);
+        return table.locator ("tbody")
+            .getByRole (AriaRole.ROW);
     }
 
-    //    public int getTotalRowsInTable (final int tableNumber) {
-    //        final Locator table = switch (tableNumber) {
-    //            case 1 -> tableOne ();
-    //            case 2 -> tableTwo ();
-    //            default -> throw new IllegalStateException ("Invalid Table Number: " + tableNumber);
-    //        };
-    //
-    //    }
-
-    public void tableRecords (final int tableNumber) {
-        final Locator table = switch (tableNumber) {
-            case 1 -> tableOne ();
-            case 2 -> tableTwo ();
-            default -> throw new IllegalStateException ("Invalid Table Number: " + tableNumber);
-        };
-
-        final Locator rows = table.getByRole (AriaRole.ROW);
-        for (int i = 1; i < rows.count (); i++) {
-            System.out.println (rows.nth (i)
-                .innerText ());
-        }
+    public List<String> getAllRecordsFromTable (final Locator table) {
+        return table.locator ("tbody")
+            .getByRole (AriaRole.ROW)
+            .allInnerTexts ();
     }
 
-    public void getColumnsOfTableOne () {
-        final Locator columnHeader = tableOne ().getByRole (AriaRole.COLUMNHEADER);
-        for (int i = 0; i < columnHeader.count (); i++) {
-            columnHeader.nth (i)
-                .innerText ();
-        }
+    public Locator getColumnHeadersOfTable (final Locator table) {
+        return table.getByRole (AriaRole.COLUMNHEADER);
     }
-
-    private static Locator getRows (final Locator rows) {
-        return rows;
-    }
-
 }

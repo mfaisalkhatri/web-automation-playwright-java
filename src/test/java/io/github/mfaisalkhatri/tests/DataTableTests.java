@@ -31,26 +31,30 @@ public class DataTableTests {
     @Test
     public void testRowNumber () {
         this.page.navigate ("https://the-internet.herokuapp.com/tables");
-        assertThat (this.dataTablePage.getTotalRowsInTable (this.dataTablePage.tableOne ())).hasCount (5);
-        assertThat (this.dataTablePage.getTotalRowsInTable (this.dataTablePage.tableTwo ())).hasCount (5);
+        assertThat (this.dataTablePage.getTotalRowsInTable (this.dataTablePage.tableOne ())).hasCount (4);
+        assertThat (this.dataTablePage.getTotalRowsInTable (this.dataTablePage.tableTwo ())).hasCount (4);
     }
 
     @Test
     public void testPrintTableRecords () {
         this.page.navigate ("https://the-internet.herokuapp.com/tables");
         System.out.println ("Printing records of Table 1");
-        this.dataTablePage.tableRecords (1);
+        this.dataTablePage.getAllRecordsFromTable (this.dataTablePage.tableOne ())
+            .forEach (System.out::println);
         System.out.println ("Printing records of Table 2");
-        this.dataTablePage.tableRecords (2);
+        this.dataTablePage.getAllRecordsFromTable (this.dataTablePage.tableTwo ())
+            .forEach (System.out::println);
     }
 
-//    @Test
-//    public void testTableOneColumnHeaders () {
-//        this.page.navigate ("https://the-internet.herokuapp.com/tables");
-//        assertEquals (this.dataTablePage.getColumnsOfTableOne (),
-//            "Last Name\tFirst Name\tEmail\tDue\tWeb Site\tAction");
-//
-//    }
+    @Test
+    public void testTableOneColumnHeaders () {
+        this.page.navigate ("https://the-internet.herokuapp.com/tables");
+        final String[] expectedColumnHeaders = { "Last Name", "First Name", "Email", "Due", "Web Site", "Action" };
+        assertThat (this.dataTablePage.getColumnHeadersOfTable (this.dataTablePage.tableOne ())).hasText (
+            expectedColumnHeaders);
+    }
+
+
 
     @AfterMethod
     public void tearDown () {
