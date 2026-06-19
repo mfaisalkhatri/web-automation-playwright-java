@@ -8,6 +8,11 @@
 - Websites used for testing are 
   - [LambdaTest e-commerce Playground](https://ecommerce-playground.lambdatest.io/)
   - [LambdaTest Selenium Playground](https://www.lambdatest.com/selenium-playground/)
+  - [Welcome to the-internet](https://the-internet.herokuapp.com/)
+  - [Jquery UI](https://jqueryui.com/selectable/)
+  - [Automation Store](https://automationteststore.com/)
+  - [Guru99 Demo Site](https://demo.guru99.com/test/simple_context_menu.html)
+  
 - This repo uses `Maven` as build tool and `TestNG` testing framework to run the tests.
 
 ## Talking more about the Scenarios Covered in this project:
@@ -27,8 +32,9 @@ I have tried to answer the below questions by providing working code example in 
 1. How to set different window sizes? 
 1. How to double on a button?
 1. How to use Page Object Model using Playwright Java?
-1. How to perform browser navigation?
-1. How to perform Mouse hover?
+1. How to handle single and multi-select dropdown fields? 
+2. How to perform different mouse click actions?
+3. How to verify if an element is displayed, enabled, or selected?
 
 ## How to run the Tests?
 
@@ -41,12 +47,17 @@ I have tried to answer the below questions by providing working code example in 
   ### 2. Maven:
       `mvn clean install -Dsuite-xml=testng.xml `
 
-## :writing_hand: Blog Links
+## :writing_hand: Tutorial Links
 
-- [Playwright Java Tutorial: Web Automation Testing | Installation and Setup](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-installation-and-setup-545c9c7661c8)
-- [Playwright Java Tutorial: Web Automation Testing | Writing and running tests on Chrome, Firefox and Edge browsers](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-writing-and-running-tests-on-chrome-firefox-and-d2446b9a69ce)
-- [Playwright Java Tutorial: Web Automation Testing | How to perform browser navigation?](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-how-to-perform-browser-navigation-043f14af5c97)
-- [Playwright Java Tutorial: Web Automation Testing | How to work with text fields?](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-how-to-work-with-text-fields-6cc9982ed7b2)
+- [Web Automation Testing with Playwright Java: Installation and Set Up](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-installation-and-setup-545c9c7661c8)
+- [Writing and running tests on Chrome, Firefox, and Edge browsers with Playwright Java](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-writing-and-running-tests-on-chrome-firefox-and-d2446b9a69ce)
+- [How to perform browser navigations with Playwright Java](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-how-to-perform-browser-navigation-043f14af5c97)
+- [How to Work with Text Box in Playwright Java for Web Automation Testing](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-how-to-work-with-text-fields-6cc9982ed7b2)
+- [How to Handle Single and Multi-Select Dropdown Fields with Playwright Java] (https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-how-to-handle-single-and-multi-select-dropdowns-426b65614e28)
+- [How to perform the Mouse Hover actions with Playwright Java for Web Automation Testing](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-how-to-perform-mouse-hover-action-08905e7996f7)
+- [How to verify if an element is displayed, enabled, or selected,  in Playwright Java](https://medium.com/@iamfaisalkhatri/playwright-java-tutorial-web-automation-testing-how-to-check-if-element-is-displayed-enabled-7b11c184e2df)
+- [Working with Data Tables with Playwright Java](https://medium.com/@iamfaisalkhatri/working-with-data-tables-with-playwright-java-e0fed9d9e61a)
+- [How to perform Mouse Click Actions using Playwright Java](https://medium.com/gitconnected/how-to-perform-different-mouse-click-actions-using-playwright-java-19ccacbec262)
 
 ## :question: Need Assistance?
 
@@ -61,8 +72,7 @@ I have tried to answer the below questions by providing working code example in 
 
 ## :thought_balloon: Checkout the blogs related to Testing written by me on the following links:
 
-- [Medium Blogs](https://medium.com/@iamfaisalkhatri)
-- [LambdaTest Blogs](https://www.lambdatest.com/blog/author/mfaisalkhatri/)
+- [Medium](https://medium.com/@iamfaisalkhatri)
 - [My Website](https://mfaisalkhatri.github.io)
 
 ### :bookmark: Checkout tutorial videos related to Software Testing and Test automation tools on [Testing Talks with Faisal Khatri](https://www.youtube.com/@faisalkhatriqa)
